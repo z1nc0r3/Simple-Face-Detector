@@ -2,7 +2,7 @@ import cv2
 
 trained_face_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-video = cv2.VideoCapture(0)
+video = cv2.VideoCapture('video.mp4')
 
 while (True) :
     ret, frame = video.read()
@@ -21,4 +21,6 @@ while (True) :
     key = cv2.waitKey(1)
     
     if key == 32 :
-        break;
+        break
+
+video.release()
